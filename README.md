@@ -21,7 +21,13 @@ mitmdump -s ./akto.py --set akto_collection=<Test123>
 ```bash
 docker build -t mitm .
 
-docker run --rm -it -v $(pwd):/opt/mitm -p 8080:8080 -e AKTO_BASE_URL="http://192.168.10.10:9090" -e AKTO_API_KEY="abcdlkaskhjfskjlsadk" mitm mitmdump -s /opt/mitm/akto.py --set akto_collection=<Test123>
+docker run --rm -it \
+  -v $(pwd):/opt/mitm \
+  -p 8080:8080 \
+  -e AKTO_BASE_URL="http://192.168.10.10:9090" \
+  -e AKTO_API_KEY="abcdlkaskhjfskjlsadk" \
+  mitm mitmdump -s /opt/mitm/akto.py \
+  --set akto_collection=<Test123>
 ```
 ## Credits
 This script is an adapted version of the [har_dump.py](https://github.com/mitmproxy/mitmproxy/blob/main/examples/contrib/har_dump.py) addon script, which has since been officially incorporated into mitmproxy.
