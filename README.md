@@ -32,7 +32,7 @@ docker run --rm -it \
   --set akto_collection=<Test123>
 ```
 
-__Note__:  Upon completion of the execution, ensure the mitmproxy is exited (or the mitmproxy container is stopped) to transmit the remaining data to Akto. 
+__Note__:  Upon completion of the execution, ensure the mitmdump is exited (or the mitmdump container is stopped) to transmit the remaining data to Akto. 
 
 ## Credits
 This script is an adapted version of the [har_dump.py](https://github.com/mitmproxy/mitmproxy/blob/main/examples/contrib/har_dump.py) addon script, which has since been officially incorporated into mitmproxy.
